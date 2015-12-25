@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+  <definition name="login.def" template="/layout.jsp">    
+      
+      <put-attribute name="menu" value="/mainmenu.jsp"/>
+      <put-attribute name="body"   value="/loginform.jsp"/>
+      <put-attribute name="footer" value="/footer.jsp"/>
+  </definition>    
+    
+    <definition name="signup.def" template="/layout.jsp">    
+      
+      <put-attribute name="menu" value="/mainmenu.jsp"/>
+      <put-attribute name="body"   value="/signupform.jsp"/>
+      <put-attribute name="footer" value="/footer.jsp"/>
+  </definition>
+  
+  <definition name="student.welcome.def" template="/layout.jsp">    
+     
+      <put-attribute name="menu" value="/student_menu.jsp"/>
+      <put-attribute name="body"   value="/body.jsp"/>
+      <put-attribute name="footer" value="/footer.jsp"/>
+  </definition> 
+  
+ 
+  
+    
+  <definition name="student.def" extends="student.welcome.def">    
+     
+       <put-attribute name="body"   value="/actionbody.jsp"/>
+  </definition>   
+  
+  
+  
+  
+  
+  
+</tiles-definitions>

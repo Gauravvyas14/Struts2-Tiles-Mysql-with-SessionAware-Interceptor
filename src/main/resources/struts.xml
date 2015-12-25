@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd ">
+<struts>	
+	<constant name="struts.devMode" value="true" />
+	<package name="default"  extends="tiles-default">
+			
+		<action name="login" class="com.gaurav.action.LoginAction">
+			<result name="login" >/login.jsp</result>
+			<result name="student" type="tiles">student.welcome.def</result>
+			<result name="input" type="tiles">login.def</result>
+		</action>	
+		
+		<action name="logout" class="com.gaurav.action.LogoutAction" >
+			<result name="success" type="redirect">/login.jsp</result>		
+		</action>
+		
+		<action name="signup" class="com.gaurav.action.SignupAction" method="signUp">
+			
+			<result name="input" type="tiles">signup.def</result>
+			<result name="error" type="redirect">/signup.jsp</result>
+			<result name="success" type="tiles">/home.jsp</result>
+     		
+		</action>	
+		
+		<action name="clerk">
+     		<result type="tiles">clerk.def</result>
+		</action>
+		
+		<action name="student" class="com.gaurav.action.StudentAction">
+     		<result name="success" >/home.jsp</result>
+     		<result name="error" type="redirect">/login.jsp</result>
+		</action>
+		
+	</package>		
+</struts>
