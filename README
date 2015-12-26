@@ -1,0 +1,1 @@
+Struts2 and tiles integration, using JDBC for data access in mysql. A login logout application using SessionAware Interceptor
